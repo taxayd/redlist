@@ -4,8 +4,7 @@
 // @version      0.2.3
 // @description  世界是由各种各样的人组成的，当你拉黑某个沙雕，你也屏蔽了世界的一部分信息，世界也就变得不再完整。怎么办？拉红他！拉红之后，他依然会出现在你的视线里，但是会被标记，以提示这是你认为的一个沙雕。
 // @author       taxayd
-// @match        *://v2ex.com/*
-// @match        *://www.v2ex.com/*
+// @match        *://*.v2ex.com/*
 // @grant GM_setValue
 // @grant GM_getValue
 // @grant GM_deleteValue
