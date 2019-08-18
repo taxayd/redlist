@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         red list
 // @namespace    https://greasyfork.org/zh-CN/scripts/388742-red-list
-// @version      0.2.3
+// @version      0.2.4
 // @description  世界是由各种各样的人组成的，当你拉黑某个沙雕，你也屏蔽了世界的一部分信息，世界也就变得不再完整。怎么办？拉红他！拉红之后，他依然会出现在你的视线里，但是会被标记，以提示这是你认为的一个沙雕。
 // @author       taxayd
 // @match        *://*.v2ex.com/*
