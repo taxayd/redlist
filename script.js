@@ -37,13 +37,13 @@
         // console.log('strlist:' + GM_getValue(listName, ""));
     }
 
-    if (path == '/' || path.startsWith('/go/'))
+    if (path == '/' || path.startsWith('/go/') || path.startsWith('/tag/'))
     {
         // 首页及类首页
         let home_list = document.getElementsByClassName('topic_info');
         let len = home_list.length;
         for(let i=0; i<len; i++) {
-            let username = path === '/' ? home_list[i].children[2] : home_list[i].children[0];
+            let username = path === '/' || path.startsWith('/tag/') ? home_list[i].children[2] : home_list[i].children[0];
             if (redlist.indexOf(username.innerText) >= 0) {
                 // console.log('in red list: ' + username.innerText);
                 home_list[i].parentElement.parentElement.parentElement.parentElement.parentElement.style = "background-image:url(https://i.loli.net/2019/06/09/5cfbebdfd083a19907.png);background-size:contain;";
