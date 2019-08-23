@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         red list
 // @namespace    https://greasyfork.org/zh-CN/scripts/388742-red-list
-// @version      0.2.5
+// @version      0.2.6
 // @description  世界是由各种各样的人组成的，当你拉黑某个沙雕，你也屏蔽了世界的一部分信息，世界也就变得不再完整。怎么办？拉红他！拉红之后，他依然会出现在你的视线里，但是会被标记，以提示这是你认为的一个沙雕。
 // @author       taxayd
 // @match        *://*.v2ex.com/*
@@ -40,13 +40,13 @@
     if (path == '/' || path.startsWith('/go/'))
     {
         // 首页及类首页
-        let home_list = document.getElementsByClassName('cell item');
+        let home_list = document.getElementsByClassName('topic_info');
         let len = home_list.length;
         for(let i=0; i<len; i++) {
-            let username = home_list[i].getElementsByTagName('strong')[0];
+            let username = path === '/' ? home_list[i].children[2] : home_list[i].children[0];
             if (redlist.indexOf(username.innerText) >= 0) {
                 // console.log('in red list: ' + username.innerText);
-                home_list[i].style = "background-image:url(https://i.loli.net/2019/06/09/5cfbebdfd083a19907.png);background-size:contain;";
+                home_list[i].parentElement.parentElement.parentElement.parentElement.parentElement.style = "background-image:url(https://i.loli.net/2019/06/09/5cfbebdfd083a19907.png);background-size:contain;";
             }
         }
     } else if (path.startsWith('/t/')) {
